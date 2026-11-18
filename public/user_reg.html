@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>User Registration Form</h2>
+
+    <form action="/user_reg_submit" method="POST">
+
+        <label>First Name:</label>
+        <input type="text" name="first_name" required>
+
+        <label>Middle Name:</label>
+        <input type="text" name="middle_name">
+
+        <label>Last Name:</label>
+        <input type="text" name="last_name" required>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <label>Security Question:</label>
+        <select name="security_question" required>
+            <option value="">Select a question</option>
+            <option>What is your first school name?</option>
+            <option>What is your favorite color?</option>
+            <option>What is your birthplace?</option>
+        </select>
+
+        <label>Security Answer:</label>
+        <input type="text" name="security_answer" required>
+
+        <label>Hobbies (comma separated):</label>
+        <input type="text" name="hobbies"
+               placeholder="Reading, Cricket, Music">
+
+        <button type="submit">Submit Registration</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
